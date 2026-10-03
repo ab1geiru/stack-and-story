@@ -1,0 +1,42 @@
+.picker {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.optional {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.controls button {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 440px) {
+  .row {
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .controls {
+    display: grid;
+    justify-items: start;
+  }
+  .controls button {
+    padding-inline: 0.6rem;
+  }
+}

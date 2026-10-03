@@ -1,0 +1,180 @@
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.card {
+  display: grid;
+  gap: 0.9rem;
+  padding: 2rem;
+  background: var(--cloud);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sheet);
+}
+
+.heading {
+  margin-top: 0.3rem;
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.form {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.back {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.switch {
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9375rem;
+}
+
+.switch a {
+  font-weight: 600;
+}
+
+.demo {
+  display: grid;
+  gap: 1rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+}
+
+.demoHeading {
+  font-size: 1.4rem;
+}
+
+.demoIntro {
+  font-size: 0.9375rem;
+  color: var(--body-text);
+  line-height: 1.7;
+}
+
+.accounts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.account {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--cloud);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.account button {
+  justify-self: stretch;
+  font-size: 0.875rem;
+}
+
+.accountHead {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.accountName {
+  font-weight: 600;
+}
+
+.accountNote {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.credentials {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.credentials > div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.credentials dt {
+  font-size: 0.75rem;
+  color: var(--muted);
+  min-width: 4.5rem;
+}
+
+.credentials dd {
+  margin: 0;
+  min-width: 0;
+}
+
+.credentials code {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  border-radius: 5px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  font-size: 0.8125rem;
+  color: var(--ink);
+  user-select: all;
+  overflow-wrap: anywhere;
+}
+
+.tip {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 820px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .page {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 1.5rem 1rem 0;
+  }
+  .card, .demo {
+    padding: 1.25rem;
+  }
+  .heading {
+    font-size: 1.8rem;
+  }
+}

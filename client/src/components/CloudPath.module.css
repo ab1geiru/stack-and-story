@@ -1,0 +1,26 @@
+.art {
+  width: 100%;
+  height: auto;
+}
+
+.labels {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  fill: var(--muted);
+}
+
+.route {
+  stroke-dashoffset: 0;
+  animation: travel 1.2s ease-out 1;
+}
+
+@keyframes travel {
+  from {
+    stroke-dashoffset: 36;
+    opacity: 0.2;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}

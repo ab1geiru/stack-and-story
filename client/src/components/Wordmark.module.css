@@ -1,0 +1,70 @@
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+}
+
+.glyph {
+  flex: none;
+}
+
+.text {
+  display: grid;
+  line-height: 1.1;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+.amp {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--violet);
+  padding-inline: 0.02em;
+}
+
+.tagline {
+  margin-top: 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .tagline {
+    display: none;
+  }
+  .name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .wordmark {
+    gap: 0.4rem;
+  }
+  .name {
+    font-size: 1.125rem;
+  }
+  .glyph {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .name {
+    font-size: 1rem;
+  }
+  .glyph {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,16 @@
+.page {
+  display: grid;
+  justify-items: start;
+  gap: 0.9rem;
+  max-width: var(--reading-max);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 0;
+}
+
+.heading {
+  font-size: var(--step-4);
+}
+
+.text {
+  color: var(--muted);
+}

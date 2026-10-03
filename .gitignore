@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output
+client/dist/
+
+# Local database (recreated and seeded automatically)
+server/data/*.sqlite
+server/data/*.sqlite-*
+
+# Secrets and local configuration
+.env
+server/.env
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+*.tmp
+.vite/

@@ -1,0 +1,239 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  min-height: 76px;
+}
+
+.brand {
+  display: inline-flex;
+  justify-self: start;
+  min-height: var(--tap);
+  align-items: center;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0.6rem 1rem;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: background var(--ease), color var(--ease);
+}
+
+.navLink:hover {
+  background: var(--surface-soft);
+  color: var(--ink);
+}
+
+.active {
+  color: var(--accent);
+  background: var(--surface-soft);
+}
+
+.write {
+  padding-inline: 1rem;
+}
+
+.writeLong {
+  display: inline;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--border);
+}
+
+.account:empty {
+  display: none;
+}
+
+.accountPlaceholder {
+  display: block;
+  width: 5rem;
+  height: 2rem;
+}
+
+.user {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: var(--tap);
+  min-height: var(--tap);
+  justify-content: center;
+  padding: 0.3rem;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.user:hover {
+  background: var(--surface-soft);
+}
+
+.userText {
+  display: grid;
+}
+
+.settingsLabel {
+  font-size: 0.6875rem;
+  color: var(--muted);
+}
+
+.userName {
+  max-width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.signOut {
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+
+.signOut:hover:not(:disabled) {
+  color: var(--ink);
+}
+
+.signIn, .signUp {
+  font-size: 0.875rem;
+  padding-inline: 0.9rem;
+}
+
+.headerError {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 0.4rem 1.5rem 0.6rem;
+  color: var(--error);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1050px) {
+  .inner {
+    gap: 0.75rem;
+  }
+  .userText {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .tools {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.65rem 0.5rem;
+    padding: 0.65rem 1rem;
+  }
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .tools {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+  .navLink {
+    border-color: var(--border);
+    background: var(--cloud);
+  }
+  .active {
+    border-color: var(--accent);
+    background: var(--surface-soft);
+  }
+  .write {
+    width: 100%;
+  }
+  .account {
+    gap: 0.2rem;
+    padding-left: 0;
+    border-left: 0;
+  }
+  .signUp {
+    display: none;
+  }
+  .signOut {
+    padding: 0.5rem;
+    width: var(--tap);
+  }
+  .signOut span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 440px) {
+  .inner {
+    padding-inline: 0.75rem;
+  }
+  .tools {
+    gap: 0.3rem;
+  }
+  .signIn {
+    padding-inline: 0.65rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .inner {
+    column-gap: 0.25rem;
+  }
+}

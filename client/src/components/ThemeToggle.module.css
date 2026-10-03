@@ -1,0 +1,31 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: var(--tap);
+  min-height: var(--tap);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--cloud);
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--ease), border-color var(--ease);
+}
+
+.toggle:hover {
+  background: var(--surface-soft);
+  border-color: var(--control-border);
+}
+
+@media (max-width: 760px) {
+  .label {
+    display: none;
+  }
+  .toggle {
+    padding: 0.5rem;
+  }
+}

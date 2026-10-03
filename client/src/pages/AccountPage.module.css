@@ -1,0 +1,104 @@
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 0;
+}
+
+.loading {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: var(--tap);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.card {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 0.75rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--violet);
+  border-radius: var(--radius);
+  background: var(--cloud);
+  box-shadow: var(--shadow-sheet);
+}
+
+.intro {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+}
+
+.lede {
+  color: var(--muted);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.details dt {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.details dd {
+  margin: 0.25rem 0 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.form {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.5rem;
+}
+
+.actions p {
+  flex-basis: 100%;
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 1rem 1rem 0;
+  }
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
